@@ -238,11 +238,11 @@ $(document).ready(function () {
         $("#results").append("<div id='title1' class='row' style='text-align:center; padding-bottom:15px;'><h4>Displaying Figures for: " +
           area + "</h4><h5>Data last updated 48hrs ago</h5></div>");
         $("#title1").append("<div class='box-alt cases green darken-1 white-text z-depth-2 valign-wrapper' id='cases'>" +
-          "New Cases: " + newCases + "</div>");
+          "New Cases: " + `<br> ${newCases}` + "</div>");
         $("#title1").append("<div class='box-alt hospital green darken-1 white-text z-depth-2 valign-wrapper' id='total'>" +
-          "Total Cases: " + totalCases + "</div>");
+          "Total Cases: " + `<br> ${totalCases}` + "</div>");
         $("#title1").append("<div class='box-alt deaths green darken-1 white-text z-depth-2 valign-wrapper' id='deaths'>" +
-          "Total Deaths: " + deaths + "</div>");
+          "Total Deaths: " + `<br> ${deaths}` + "</div>");
 
         // Make second API call
         covidNational();
@@ -270,22 +270,22 @@ $(document).ready(function () {
         $("#results2").addClass("stats");
         $("#results2").append("<div id='title2' class='row' style='padding-bottom:15px; text-align:center'><h4>Comparison to National Figures</h4><h5>Data last updated 48hrs ago</h5></div>");
         $("#title2").append("<div class='box-alt hospital green darken-1 white-text z-depth-2 valign-wrapper' id='cases-national'>" +
-          "New Cases: " + casesNat + " </div>");
+          "New Cases: " + `<br> ${casesNat}` + " </div>");
         $("#title2").append("<div class='box-alt hospital green darken-1 white-text z-depth-2 valign-wrapper' id='total-national'>" +
-          "Total Cases: " + totalCasesNat + "</div>");
+          "Total Cases: " + `<br> ${totalCasesNat}` + "</div>");
         $("#title2").append("<div class='box-alt hospital green darken-1 white-text z-depth-2 valign-wrapper' id='deaths-national'>" +
-          "Total Deaths: " + deathsNat + "</div>");
+          "Total Deaths: " + `<br> ${deathsNat}` + "</div>");
 
         // Dynamically add hospital stats
         $("#results3").html("");
         $("#results3").addClass("stats");
         $("#results3").append("<div id='title3' class='row' style='padding-bottom:15px; text-align:center'><h4>Current Hospital Data for England</h4><h5>Data last updated 48hrs ago</h5></div>");
         $("#title3").append("<div class='box hospital green darken-1 white-text z-depth-2 valign-wrapper' id='admissions'>" +
-          "New Admissions: " + admissions + "</div>");
+          "New Admissions: " + `<br> ${admissions}`  + "</div>");
         $("#title3").append("<div class='box hospital green darken-1 white-text z-depth-2 valign-wrapper' id='hospital'>" +
-          "COVID Patients: " + hospital + "</div>");
+          "COVID Patients: " + `<br> ${hospital}` + "</div>");
         $("#title3").append("<div class='box hospital green darken-1 white-text z-depth-2 valign-wrapper' id='beds'>" +
-          "Patients on Ventilators: " + beds + "</div>");
+          "Patients on Ventilators: " + `<br> ${beds}` + "</div>");
       }
     })
   }
